@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Document Head: Meta information and resource links -->
   <head>
     <title>Home</title>
     <meta
@@ -7,26 +8,44 @@
       content="This is a website for a fictional company called Tasty Apple."
     />
     <meta charset="UTF-8" />
-    <link rel="icon" href="favicon.png" />
+    <link rel="icon" href="images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..900;1,14..32,400..900&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <!-- Header: Contains the main logo -->
     <header class="TA--header">
       <img width="120" height="48" src="images/logo-TA.svg" alt="logo" />
     </header>
-    <nav class="TA--menu-nav-mobile"></nav>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="TA--menu-nav-mobile">
+      <a href="" aria-current="page">
+        <span class="icon-ngoaitru"></span>
+        Ngoại trú
+      </a>
+      <a href="">
+        <span class="icon-khamsuckhoe"></span>
+        Khám sức khoẻ
+      </a>
+      <a href="">
+        <span class="icon-noitru"></span>
+        Nội trú
+      </a>
+      <a href="">
+        <span class="icon-tiemchung"></span>
+        Tiêm chủng
+      </a>
+    </nav>
+
+    <!-- Main Content Container -->
     <main class="TA--container">
+      <!-- Desktop Menu and User Information -->
       <section class="TA--menu">
         <div class="TA--menu-tabs">
           <h1>HỒ SƠ SỨC KHOẺ</h1>
+          <!-- Navigation Tabs -->
           <nav>
             <a href="/" aria-current="page">Ngoại trú</a>
             <a href="/kham-suc-khoe">Khám sức khoẻ</a>
@@ -34,8 +53,9 @@
             <a href="/tiem-chung">Tiêm chủng</a>
           </nav>
         </div>
+        <!-- User Profile Information -->
         <div class="TA--menu-infos">
-          <p>ĐỖ THỊ THANH LOAN</p>
+          <p>ĐỖ NGUYỄN THANH LOAN</p>
           <div>Nữ, ngày sinh 20/7/2004</div>
           <div>PID: 2460026437</div>
           <picture>
@@ -43,6 +63,110 @@
             <img src="images/user.png" alt="user infos" />
           </picture>
         </div>
+      </section>
+      <!-- Main Content Area -->
+      <section class="TA--content">
+        <!-- Card Item -->
+        <article class="TA--card-item">
+          <a href="/">
+            <div class="TA--card-item-wrapper">
+              <div class="TA--date">
+                <div class="TA--date-m">8/2024</div>
+                <div class="TA--date-d">28</div>
+              </div>
+              <div class="TA--card-item-content">
+                <h2>Khám bệnh</h2>
+                <p>Bệnh viện đa khoa Tâm Anh - Quận 7, Thành phố Hồ Chí Minh</p>
+                <ul class="TA--card-item-infos">
+                  <li>
+                    <img
+                      width="18"
+                      height="18"
+                      src="images/chuan-doan.svg"
+                      alt="Chuẩn đoán"
+                    />
+                    <span>Chuẩn đoán:</span>
+                    <b>Đau dạ dày cấp tính</b>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <ul class="TA--card-item-infos-mobile">
+              <li class="span-2">
+                <img
+                  width="18"
+                  height="18"
+                  src="images/chuan-doan.svg"
+                  alt="Chuẩn đoán"
+                />
+                <span>Chuẩn đoán:</span>
+                <b>Đau dạ dày cấp tính</b>
+              </li>
+              <!-- <li>
+                <img
+                  width="18"
+                  height="18"
+                  src="images/can-nang.svg"
+                  alt="Cân nặng"
+                />
+                <span>Cân nặng</span>
+                <b>57kg</b>
+              </li>
+              <li>
+                <img width="18" height="18" src="images/bmi.svg" alt="BMI" />
+                <span>BMI</span>
+                <b>24.5</b>
+              </li> -->
+            </ul>
+          </a>
+        </article>
+        <!-- Card Item -->
+
+        <!-- Card Item -->
+        <article class="TA--card-item">
+          <a href="/">
+            <div class="TA--card-item-wrapper">
+              <div class="TA--date">
+                <div class="TA--date-m">8/2024</div>
+                <div class="TA--date-d">28</div>
+              </div>
+              <div class="TA--card-item-content">
+                <h2>Khám bệnh</h2>
+                <p>Bệnh viện đa khoa Tâm Anh - Quận 7, Thành phố Hồ Chí Minh</p>
+                <ul class="TA--card-item-infos">
+                  <li>
+                    <img
+                      width="18"
+                      height="18"
+                      src="images/chuan-doan.svg"
+                      alt="Chuẩn đoán"
+                    />
+                    <span>Chuẩn đoán:</span>
+                    <b>Đau dạ dày cấp tính</b>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <ul class="TA--card-item-infos-mobile">
+              <li>
+                <img
+                  width="18"
+                  height="18"
+                  src="images/can-nang.svg"
+                  alt="Cân nặng"
+                />
+                <span>Cân nặng</span>
+                <b>57kg</b>
+              </li>
+              <li>
+                <img width="18" height="18" src="images/bmi.svg" alt="BMI" />
+                <span>BMI</span>
+                <b>24.5</b>
+              </li>
+            </ul>
+          </a>
+        </article>
+        <!-- Card Item -->
       </section>
     </main>
   </body>

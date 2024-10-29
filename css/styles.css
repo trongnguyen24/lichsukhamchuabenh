@@ -1,5 +1,33 @@
 :root {
   --TA-color: #003caa;
+  --title-scale: clamp(1.5rem, 0.875rem + 2.5vw, 2rem);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v18-latin-regular.woff2') format('woff2'),
+    url('../fonts/inter-v18-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/inter-v18-latin-500.woff2') format('woff2'),
+    url('../fonts/inter-v18-latin-500.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inter-v18-latin-700.woff2') format('woff2'),
+    url('../fonts/inter-v18-latin-700.ttf') format('truetype');
 }
 html,
 body {
@@ -20,12 +48,24 @@ body {
   margin: auto;
   max-width: 1200px;
   padding: 2.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  @media screen and (max-width: 720px) {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
 }
 
 .TA--menu {
   display: flex;
   gap: 1.5rem;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
+
 .TA--menu-tabs {
   display: flex;
   flex: 1;
@@ -33,9 +73,12 @@ body {
   gap: 1rem;
   h1 {
     color: var(--TA-color);
-    font-size: 2rem;
+    font-size: var(--title-scale);
     font-weight: 700;
     line-height: 2.25rem; /* 112.5% */
+    @media screen and (max-width: 720px) {
+      text-align: center;
+    }
   }
   nav {
     border-radius: 1rem;
@@ -67,6 +110,9 @@ body {
         color: white;
       }
     }
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
   }
 }
 
@@ -75,14 +121,12 @@ body {
   position: relative;
   overflow: hidden;
   max-width: 460px;
-  min-width: 320px;
   width: 100%;
   color: var(--cyan-900, #164e63);
   padding: 1.25rem;
   flex-direction: column;
   gap: 0.5rem;
   border-radius: 0.75rem;
-  background: #a1e1ff;
   font-size: 1rem;
   font-size: 0.875rem;
   line-height: 1rem; /* 125% */
@@ -93,8 +137,252 @@ body {
   }
   picture {
     position: absolute;
+    display: flex;
+    justify-content: flex-end;
     right: 0;
     bottom: 0;
+    top: 0;
+    left: 0;
     pointer-events: none;
+    background: #a1e1ff;
+    z-index: -1;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+    @media screen and (max-width: 720px) {
+      right: -5%;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+  }
+}
+
+.TA--menu-nav-mobile {
+  display: none;
+  @media screen and (max-width: 720px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 0.25rem;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-top: 1px solid var(--blue-100, #dbeafe);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    a {
+      color: var(--slate-600, #475569);
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 0.25rem;
+      justify-content: center;
+      font-size: 0.625rem;
+      font-weight: 700;
+      align-items: center;
+      white-space: nowrap;
+      span {
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      .icon-ngoaitru {
+        background-image: url('../images/ngoai-tru.svg');
+      }
+      .icon-khamsuckhoe {
+        background-image: url('../images/kham-suc-khoe.svg');
+      }
+      .icon-noitru {
+        background-image: url('../images/noi-tru.svg');
+      }
+      .icon-tiemchung {
+        background-image: url('../images/tiem-chung.svg');
+      }
+      &[aria-current='page'] {
+        color: var(--blue-600, #2563eb);
+        .icon-ngoaitru {
+          background-image: url('../images/ngoai-tru-active.svg');
+        }
+        .icon-khamsuckhoe {
+          background-image: url('../images/kham-suc-khoe-active.svg');
+        }
+        .icon-noitru {
+          background-image: url('../images/noi-tru-active.svg');
+        }
+        .icon-tiemchung {
+          background-image: url('../images/tiem-chung-active.svg');
+        }
+      }
+    }
+  }
+}
+
+.TA--content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.TA--card-item {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  border-radius: 1rem;
+  border: 1px solid var(--slate-200, #e2e8f0);
+  background: #fff;
+  box-shadow: 0px 40px 11px 0px rgba(84, 84, 84, 0),
+    0px 26px 10px 0px rgba(84, 84, 84, 0.01),
+    0px 15px 9px 0px rgba(84, 84, 84, 0.03),
+    0px 6px 6px 0px rgba(84, 84, 84, 0.05),
+    0px 2px 4px 0px rgba(84, 84, 84, 0.06);
+  .TA--card-item-wrapper {
+    display: flex;
+    padding: 0.438rem;
+    gap: 1rem;
+    .TA--date {
+      display: flex;
+      width: 5rem;
+      flex-shrink: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-items: stretch;
+      color: var(--blue-600, #2563eb);
+      border-radius: 0.5rem;
+      background: var(--blue-50, #eff6ff);
+      @media screen and (max-width: 720px) {
+        width: 4.25rem;
+      }
+      .TA--date-m {
+        display: flex;
+        padding: 0.5rem 0;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.875rem;
+        line-height: 1;
+        border-bottom: 1px solid var(--blue-200, #bfdbfe);
+        @media screen and (max-width: 720px) {
+          font-size: 0.75rem;
+          padding: 0.4rem 0;
+        }
+      }
+      .TA--date-d {
+        padding: 0.865rem 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 0;
+        text-align: center;
+        text-shadow: 0px 1px 0px #fff;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 2.5rem; /* 0% */
+        @media screen and (max-width: 720px) {
+          padding: 0.75rem 0rem;
+          font-size: 2rem;
+          line-height: 2rem; /* 0% */
+        }
+      }
+    }
+    .TA--card-item-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+      h2 {
+        color: var(--slate-800, #1e293b);
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.25rem; /* 125% */
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+      }
+      p {
+        color: var(--slate-500, #64748b);
+        font-size: 0.875rem;
+        line-height: 1.25rem; /* 142.857% */
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      .TA--card-item-infos {
+        display: flex;
+        list-style: none;
+        color: var(--slate-800, #1e293b);
+        font-size: 0.875rem;
+        gap: 1.5rem;
+        @media screen and (max-width: 720px) {
+          display: none;
+        }
+        li {
+          display: flex;
+          align-items: flex-start;
+          overflow: hidden;
+          line-height: 1.125rem;
+          gap: 0.25rem;
+          img {
+            width: 1.125rem;
+            aspect-ratio: 1;
+          }
+          span {
+            flex-shrink: 0;
+          }
+          b {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+          }
+        }
+      }
+    }
+  }
+  .TA--card-item-infos-mobile {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    list-style: none;
+    color: var(--slate-800, #1e293b);
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    border-top: 1px solid var(--slate-200, #e2e8f0);
+    background: var(--slate-50, #f8fafc);
+    align-self: stretch;
+    display: none;
+    @media screen and (max-width: 720px) {
+      display: grid;
+    }
+    @media screen and (max-width: 320px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    li {
+      display: flex;
+      align-items: flex-start;
+      overflow: hidden;
+      line-height: 1.125rem;
+      gap: 0.25rem;
+      img {
+        width: 1.125rem;
+        aspect-ratio: 1;
+      }
+      span {
+        flex-shrink: 0;
+      }
+      b {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+    }
+    .span-2 {
+      grid-column: span 2 / span 2;
+    }
   }
 }
