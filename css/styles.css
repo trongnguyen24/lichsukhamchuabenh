@@ -52,7 +52,7 @@ body {
   flex-direction: column;
   gap: 2.5rem;
   @media screen and (max-width: 720px) {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1rem 5.5rem;
     gap: 1.5rem;
   }
 }
@@ -169,7 +169,7 @@ body {
     display: flex;
     gap: 0.25rem;
     align-items: flex-start;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
     text-align: center;
     border-top: 1px solid var(--blue-100, #dbeafe);
     background: rgba(255, 255, 255, 0.95);
@@ -178,6 +178,7 @@ body {
       color: var(--slate-600, #475569);
       display: flex;
       flex: 1;
+      padding: 0.5rem 0;
       flex-direction: column;
       gap: 0.25rem;
       justify-content: center;
@@ -185,6 +186,9 @@ body {
       font-weight: 700;
       align-items: center;
       white-space: nowrap;
+      &:hover {
+        background-color: var(--slate-100, #f1f5f9);
+      }
       span {
         display: block;
         width: 1.5rem;
@@ -239,6 +243,15 @@ body {
     0px 15px 9px 0px rgba(84, 84, 84, 0.03),
     0px 6px 6px 0px rgba(84, 84, 84, 0.05),
     0px 2px 4px 0px rgba(84, 84, 84, 0.06);
+  transition-property: color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  &:hover {
+    border: 1px solid var(--blue-300, #93c5fd);
+    h2 {
+      color: var(--blue-600, #2563eb) !important;
+    }
+  }
   .TA--card-item-wrapper {
     display: flex;
     padding: 0.438rem;
@@ -302,6 +315,9 @@ body {
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 1;
+        transition-property: color, border-color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
       }
       p {
         color: var(--slate-500, #64748b);
