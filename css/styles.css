@@ -446,7 +446,7 @@ body {
   .radiotab:checked + .label {
     border: 1px solid var(--blue-200, #bfdbfe);
     background: var(--blue-100, #dbeafe);
-    color: var(--blue-600, #2563eb);
+    color: var(--blue-700, #1d4ed8);
   }
 
   .panel {
