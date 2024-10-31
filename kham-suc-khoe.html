@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Document Head: Meta information and resource links -->
+  <head>
+    <title>Home</title>
+    <meta
+      name="description"
+      content="This is a website for a fictional company called Tasty Apple."
+    />
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header: Contains the main logo -->
+    <header class="TA--header">
+      <img width="120" height="48" src="images/logo-TA.svg" alt="logo" />
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="TA--menu-nav-mobile">
+      <a href="index.html">
+        <span class="icon-ngoaitru"></span>
+        Ngoại trú
+      </a>
+      <a href="kham-suc-khoe.html" aria-current="page">
+        <span class="icon-khamsuckhoe"></span>
+        Khám sức khoẻ
+      </a>
+      <a href="noi-tru.html">
+        <span class="icon-noitru"></span>
+        Nội trú
+      </a>
+      <a href="tiem-chung.html">
+        <span class="icon-tiemchung"></span>
+        Tiêm chủng
+      </a>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="TA--container">
+      <!-- Desktop Menu and User Information -->
+      <section class="TA--menu">
+        <div class="TA--menu-tabs">
+          <h1>HỒ SƠ SỨC KHOẺ</h1>
+          <!-- Navigation Tabs -->
+          <nav>
+            <a href="index.html">Ngoại trú</a>
+            <a href="kham-suc-khoe.html" aria-current="page">Khám sức khoẻ</a>
+            <a href="noi-tru.html">Nội trú</a>
+            <a href="tiem-chung.html">Tiêm chủng</a>
+          </nav>
+        </div>
+        <!-- User Profile Information -->
+        <div class="TA--menu-infos">
+          <p>ĐỖ NGUYỄN THANH LOAN</p>
+          <div>Nữ, ngày sinh 20/7/2004</div>
+          <div>PID: 2460026437</div>
+          <picture>
+            <source srcset="images/user.webp" type="image/webp" />
+            <img src="images/user.png" alt="user infos" />
+          </picture>
+        </div>
+      </section>
+
+      <div class="tabs">
+        <input
+          class="radiotab"
+          name="tabs"
+          tabindex="1"
+          type="radio"
+          id="tabone"
+          checked="checked"
+        />
+        <label class="label" for="tabone"
+          ><svg
+            width="20"
+            height="22"
+            viewBox="0 0 20 22"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.94358 0.25H11.0564C12.8942 0.249984 14.3498 0.249972 15.489 0.403135C16.6614 0.560763 17.6104 0.89288 18.3588 1.64124C19.1071 2.38961 19.4392 3.33856 19.5969 4.51098C19.75 5.65019 19.75 7.10583 19.75 8.94359V13.0564C19.75 14.8942 19.75 16.3498 19.5969 17.489C19.4392 18.6614 19.1071 19.6104 18.3588 20.3588C17.6104 21.1071 16.6614 21.4392 15.489 21.5969C14.3498 21.75 12.8942 21.75 11.0564 21.75H8.94359C7.10583 21.75 5.65019 21.75 4.51098 21.5969C3.33856 21.4392 2.38961 21.1071 1.64124 20.3588C0.89288 19.6104 0.560763 18.6614 0.403135 17.489C0.249972 16.3498 0.249984 14.8942 0.25 13.0564V8.94358C0.249984 7.10582 0.249972 5.65019 0.403135 4.51098C0.560763 3.33856 0.89288 2.38961 1.64124 1.64124C2.38961 0.89288 3.33856 0.560763 4.51098 0.403135C5.65019 0.249972 7.10582 0.249984 8.94358 0.25ZM4.71085 1.88976C3.70476 2.02502 3.12511 2.27869 2.7019 2.7019C2.27869 3.12511 2.02502 3.70476 1.88976 4.71085C1.75159 5.73851 1.75 7.09318 1.75 9V13C1.75 14.9068 1.75159 16.2615 1.88976 17.2892C2.02502 18.2952 2.27869 18.8749 2.7019 19.2981C3.12511 19.7213 3.70476 19.975 4.71085 20.1102C5.73851 20.2484 7.09318 20.25 9 20.25H11C12.9068 20.25 14.2615 20.2484 15.2892 20.1102C16.2952 19.975 16.8749 19.7213 17.2981 19.2981C17.7213 18.8749 17.975 18.2952 18.1102 17.2892C18.2484 16.2615 18.25 14.9068 18.25 13V9C18.25 7.09318 18.2484 5.73851 18.1102 4.71085C17.975 3.70476 17.7213 3.12511 17.2981 2.7019C16.8749 2.27869 16.2952 2.02502 15.2892 1.88976C14.2615 1.75159 12.9068 1.75 11 1.75H9C7.09318 1.75 5.73851 1.75159 4.71085 1.88976ZM9.99998 4.25C10.4142 4.25 10.75 4.58579 10.75 5V6.25L12 6.25C12.4142 6.25 12.75 6.58579 12.75 7C12.75 7.41421 12.4142 7.75 12 7.75L10.75 7.75L10.75 9C10.75 9.41421 10.4142 9.75 9.99999 9.75C9.58577 9.75 9.24999 9.41422 9.24999 9L9.24998 7.75H7.99997C7.58575 7.75 7.24997 7.41421 7.24997 7C7.24997 6.58579 7.58575 6.25 7.99997 6.25H9.24998V5C9.24998 4.58579 9.58577 4.25 9.99998 4.25ZM5.25 13C5.25 12.5858 5.58579 12.25 6 12.25H14C14.4142 12.25 14.75 12.5858 14.75 13C14.75 13.4142 14.4142 13.75 14 13.75H6C5.58579 13.75 5.25 13.4142 5.25 13ZM6.25 17C6.25 16.5858 6.58579 16.25 7 16.25H13C13.4142 16.25 13.75 16.5858 13.75 17C13.75 17.4142 13.4142 17.75 13 17.75H7C6.58579 17.75 6.25 17.4142 6.25 17Z"
+              fill="currentColor"
+            />
+          </svg>
+          Hồ sơ khám</label
+        >
+        <div class="panel">
+          <!-- Main Content Area -->
+          <section class="TA--content">
+            <!-- Card Item -->
+            <article class="TA--card-item">
+              <a href="/">
+                <div class="TA--card-item-wrapper">
+                  <div class="TA--date">
+                    <div class="TA--date-m">8/2024</div>
+                    <div class="TA--date-d">28</div>
+                  </div>
+                  <div class="TA--card-item-content">
+                    <h2>Khám bệnh</h2>
+                    <p>
+                      Bệnh viện đa khoa Tâm Anh - Quận 7, Thành phố Hồ Chí Minh
+                    </p>
+                    <ul class="TA--card-item-infos">
+                      <li>
+                        <img
+                          width="18"
+                          height="18"
+                          src="images/can-nang.svg"
+                          alt="Cân nặng"
+                        />
+                        <span>Cân nặng</span>
+                        <b>57kg</b>
+                      </li>
+                      <li>
+                        <img
+                          width="18"
+                          height="18"
+                          src="images/bmi.svg"
+                          alt="BMI"
+                        />
+                        <span>BMI</span>
+                        <b>24.5</b>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="TA--card-item-infos-mobile">
+                  <li>
+                    <img
+                      width="18"
+                      height="18"
+                      src="images/can-nang.svg"
+                      alt="Cân nặng"
+                    />
+                    <span>Cân nặng</span>
+                    <b>57kg</b>
+                  </li>
+                  <li>
+                    <img
+                      width="18"
+                      height="18"
+                      src="images/bmi.svg"
+                      alt="BMI"
+                    />
+                    <span>BMI</span>
+                    <b>24.5</b>
+                  </li>
+                </ul>
+              </a>
+            </article>
+          </section>
+        </div>
+        <input
+          class="radiotab"
+          tabindex="1"
+          name="tabs"
+          type="radio"
+          id="tabtwo"
+        />
+        <label class="label" for="tabtwo"
+          ><svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.9426 1.25H12.0574C14.3658 1.24999 16.1748 1.24998 17.5863 1.43975C19.031 1.63399 20.1711 2.03933 21.0659 2.93414C21.9607 3.82895 22.366 4.96897 22.5603 6.41371C22.75 7.82519 22.75 9.63423 22.75 11.9426V12.0574C22.75 14.3658 22.75 16.1748 22.5603 17.5863C22.366 19.031 21.9607 20.1711 21.0659 21.0659C20.1711 21.9607 19.031 22.366 17.5863 22.5603C16.1748 22.75 14.3658 22.75 12.0574 22.75H11.9426C9.63423 22.75 7.82519 22.75 6.41371 22.5603C4.96897 22.366 3.82895 21.9607 2.93414 21.0659C2.03933 20.1711 1.63399 19.031 1.43975 17.5863C1.24998 16.1748 1.24999 14.3658 1.25 12.0574V11.9426C1.24999 9.63423 1.24998 7.82519 1.43975 6.41371C1.63399 4.96897 2.03933 3.82895 2.93414 2.93414C3.82895 2.03933 4.96897 1.63399 6.41371 1.43975C7.82519 1.24998 9.63423 1.24999 11.9426 1.25ZM6.61358 2.92637C5.33517 3.09825 4.56445 3.42514 3.9948 3.9948C3.42514 4.56445 3.09825 5.33517 2.92637 6.61358C2.75159 7.91356 2.75 9.62178 2.75 12C2.75 12.8274 2.75019 13.5738 2.75781 14.25H5C5.03618 14.25 5.07209 14.2499 5.10773 14.2499C5.63376 14.2491 6.10075 14.2483 6.52918 14.4319C6.9576 14.6155 7.27913 14.9542 7.64131 15.3357C7.66584 15.3616 7.69056 15.3876 7.71552 15.4138L8.85712 16.6125C8.93865 16.6981 9.00536 16.7681 9.06418 16.8277C9.11449 16.7608 9.17125 16.6825 9.24061 16.5867L12.8708 11.5761C12.8786 11.5652 12.8865 11.5544 12.8944 11.5435C13.0433 11.3378 13.1985 11.1233 13.3518 10.9653C13.5272 10.7844 13.7992 10.5708 14.1937 10.5527C14.5882 10.5346 14.8787 10.7223 15.0699 10.8863C15.2371 11.0297 15.4114 11.229 15.5785 11.4202C15.5873 11.4303 15.5962 11.4403 15.605 11.4504L17.3823 13.4816C17.868 14.0368 17.9718 14.1316 18.085 14.183C18.1982 14.2343 18.3379 14.25 19.0756 14.25H21.2422C21.2498 13.5738 21.25 12.8274 21.25 12C21.25 9.62178 21.2484 7.91356 21.0736 6.61358C20.9018 5.33517 20.5749 4.56445 20.0052 3.9948C19.4355 3.42514 18.6648 3.09825 17.3864 2.92637C16.0864 2.75159 14.3782 2.75 12 2.75C9.62177 2.75 7.91356 2.75159 6.61358 2.92637ZM21.2057 15.75H19.0756C19.0373 15.75 18.9993 15.7501 18.9615 15.7501C18.4059 15.7511 17.9125 15.7519 17.4652 15.5489C17.0179 15.346 16.6936 14.9741 16.3284 14.5553C16.3036 14.5269 16.2787 14.4982 16.2534 14.4694L14.4761 12.4382C14.395 12.3454 14.3284 12.2695 14.2697 12.2046C14.2171 12.2746 14.1578 12.3563 14.0855 12.4561L10.4553 17.4668C10.4477 17.4773 10.4401 17.4879 10.4324 17.4984C10.2894 17.696 10.1391 17.9035 9.99032 18.0574C9.8191 18.2345 9.55618 18.4416 9.17422 18.4672C8.79226 18.4929 8.50402 18.3228 8.31067 18.1702C8.1426 18.0375 7.96597 17.8519 7.79785 17.6753C7.78885 17.6658 7.77987 17.6564 7.77091 17.647L6.62931 16.4483C6.14838 15.9433 6.04684 15.8572 5.9383 15.8106C5.82976 15.7641 5.69734 15.75 5 15.75H2.79427C2.82018 16.3612 2.86126 16.9021 2.92637 17.3864C3.09825 18.6648 3.42514 19.4355 3.9948 20.0052C4.56445 20.5749 5.33517 20.9018 6.61358 21.0736C7.91356 21.2484 9.62177 21.25 12 21.25C14.3782 21.25 16.0864 21.2484 17.3864 21.0736C18.6648 20.9018 19.4355 20.5749 20.0052 20.0052C20.5749 19.4355 20.9018 18.6648 21.0736 17.3864C21.1387 16.9021 21.1798 16.3612 21.2057 15.75Z"
+              fill="currentColor"
+            />
+          </svg>
+          Biểu đồ sức khoẻ</label
+        >
+        <div class="panel">
+          <div class="bieudosuckhoe">
+            <div class="bieudosuckhoe-wrapper">
+              <table>
+                <tr>
+                  <th class="stick"><b>Chỉ số sức khoẻ</b></th>
+                  <th>28/8/2024</th>
+                  <th>17/5/2024</th>
+                  <th>8/3/2024</th>
+                  <th>16/1/2024</th>
+                  <th>22/11/2023</th>
+                  <th>12/7/2023</th>
+                </tr>
+                <tr>
+                  <td class="stick">
+                    <div class="stick-item">
+                      <picture>
+                        <source
+                          srcset="images/can-nang-img.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          width="48"
+                          height="48"
+                          src="images/an-nang-img.png"
+                          alt="Cân nặng"
+                        />
+                      </picture>
+                      <div class="stick-item-text">
+                        <p>Cân nặng</p>
+                        <span>Kilogram</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>51.4</td>
+                  <td>57.9</td>
+                  <td>56.4</td>
+                  <td>55.2</td>
+                  <td>54.6</td>
+                  <td>54.6</td>
+                </tr>
+                <tr>
+                  <td class="stick">
+                    <div class="stick-item">
+                      <picture>
+                        <source
+                          srcset="images/bmi-img.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          width="48"
+                          height="48"
+                          src="images/bmi-img.png"
+                          alt="Cân nặng"
+                        />
+                      </picture>
+                      <div class="stick-item-text">
+                        <p>Chỉ số BMI</p>
+                        <span>Kilogram/m2</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>22.4</td>
+                  <td>22.4</td>
+                  <td>22.4</td>
+                  <td>22.4</td>
+                  <td>22.4</td>
+                  <td>22.4</td>
+                </tr>
+                <tr>
+                  <td class="stick">
+                    <div class="stick-item">
+                      <picture>
+                        <source
+                          srcset="images/vong-bung-img.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          width="48"
+                          height="48"
+                          src="images/vong-bung-img.png"
+                          alt="Cân nặng"
+                        />
+                      </picture>
+                      <div class="stick-item-text">
+                        <p>Vòng bụng</p>
+                        <span>Centimet</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>63.5</td>
+                  <td>63.5</td>
+                  <td>63.5</td>
+                  <td>63.5</td>
+                  <td>63.5</td>
+                  <td>63.5</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
