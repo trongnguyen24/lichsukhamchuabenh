@@ -29,6 +29,11 @@
   src: url('../fonts/inter-v18-latin-700.woff2') format('woff2'),
     url('../fonts/inter-v18-latin-700.ttf') format('truetype');
 }
+
+html {
+  scrollbar-width: auto;
+}
+
 html,
 body {
   font-family: 'Inter', sans-serif;
