@@ -105,6 +105,9 @@ body {
       line-height: 1; /* 0% */
       text-wrap: nowrap;
       border-radius: 0.625rem;
+      transition-property: color, border-color, background-color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 175ms;
       &:hover {
         background: var(--blue-100, #dbeafe);
         border: 1px solid var(--blue-100, #dbeafe);
@@ -429,10 +432,12 @@ body {
     align-items: center;
     display: flex;
     gap: 0.25rem;
-
     order: 1;
     border: 1px dashed var(--slate-100, #f1f5f9);
     background: var(--slate-50, #f8fafc);
+    transition-property: color, border-color, background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 175ms;
     @media screen and (max-width: 720px) {
       font-size: 0.875rem;
       width: calc(50% - 0.25rem);
